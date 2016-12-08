@@ -171,6 +171,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="_Resources\Audio\OldTestament\Ezekiel\Ezekiel_3.mp3" />
     <None Include="Properties\PublishProfiles\godaddy-shelbysBible.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

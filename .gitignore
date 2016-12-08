@@ -2,6 +2,8 @@ shelbysBible/shelbysBible/.vs/config/applicationhost.config
 shelbysBible/shelbysBible/.vs/shelbysBible/v14/.suo
 shelbysBible/shelbysBible/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 
+/_Resources/*
+
 ###################
 # compiled source #
 ###################
