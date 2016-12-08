@@ -1,0 +1,18 @@
+﻿@model shelbysBible.Models.LoadViewModel
+
+@{
+    ViewBag.Title = "Load";
+}
+
+<h2>Load</h2>
+
+@{ 
+    var path = string.Format("/_Resources/Audio/OldTestament/{0}/{0}_{1}.mp3", Model.Book, Model.Chapter);
+}
+
+<div class="row">
+    <audio controls="controls">
+        <source src="@path" type="audio/mpeg" />
+    </audio>
+</div>
+
