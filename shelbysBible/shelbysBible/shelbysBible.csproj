@@ -154,12 +154,11 @@
     </Compile>
     <Compile Include="Models\LoadViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\BookMapperSupport.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="_Resources\Audio\OldTestament\Ezekiel\Ezekiel_1.mp3" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="_Resources\Audio\OldTestament\Ezekiel\Ezekiel_2.mp3" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -171,7 +170,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="_Resources\Audio\OldTestament\Ezekiel\Ezekiel_3.mp3" />
+    <Content Include="_Resources\Audio\OldTestament\B1_Genesis\Genesis_1.mp3" />
     <None Include="Properties\PublishProfiles\godaddy-shelbysBible.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -201,6 +200,31 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="_Resources\Audio\OldTestament\B10_2Samuel\" />
+    <Folder Include="_Resources\Audio\OldTestament\B11_1Kings\" />
+    <Folder Include="_Resources\Audio\OldTestament\B12_2Kings\" />
+    <Folder Include="_Resources\Audio\OldTestament\B13_1Chronicles\" />
+    <Folder Include="_Resources\Audio\OldTestament\B14_2Chronicles\" />
+    <Folder Include="_Resources\Audio\OldTestament\B15_Ezra\" />
+    <Folder Include="_Resources\Audio\OldTestament\B16_Nehemiah\" />
+    <Folder Include="_Resources\Audio\OldTestament\B17_Esther\" />
+    <Folder Include="_Resources\Audio\OldTestament\B18_Job\" />
+    <Folder Include="_Resources\Audio\OldTestament\B19_Psalm\" />
+    <Folder Include="_Resources\Audio\OldTestament\B20_Proverbs\" />
+    <Folder Include="_Resources\Audio\OldTestament\B21_Ecclesiastes\" />
+    <Folder Include="_Resources\Audio\OldTestament\B22_SongOfSoloman\" />
+    <Folder Include="_Resources\Audio\OldTestament\B23_Isaiah\" />
+    <Folder Include="_Resources\Audio\OldTestament\B24_Jeremiah\" />
+    <Folder Include="_Resources\Audio\OldTestament\B25_Lamentations\" />
+    <Folder Include="_Resources\Audio\OldTestament\B26_Ezekiel\" />
+    <Folder Include="_Resources\Audio\OldTestament\B2_Exodus\" />
+    <Folder Include="_Resources\Audio\OldTestament\B3_Leviticus\" />
+    <Folder Include="_Resources\Audio\OldTestament\B4_Numbers\" />
+    <Folder Include="_Resources\Audio\OldTestament\B5_Deuteronomy\" />
+    <Folder Include="_Resources\Audio\OldTestament\B6_Joshua\" />
+    <Folder Include="_Resources\Audio\OldTestament\B7_Judges\" />
+    <Folder Include="_Resources\Audio\OldTestament\B8_Ruth\" />
+    <Folder Include="_Resources\Audio\OldTestament\B9_1Samuel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
