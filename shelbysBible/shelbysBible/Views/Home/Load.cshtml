@@ -1,18 +1,25 @@
-﻿@model shelbysBible.Models.LoadViewModel
+﻿@model LoadViewModel
 
 @{
     ViewBag.Title = "Load";
 }
 
-<h2>Load</h2>
+<h2 class="text-center">@Model.Book @Model.Chapter</h2>
 
-@{ 
+@{
     var path = string.Format("/_Resources/Audio/OldTestament/{0}/{1}_{2}.mp3", Model.BookFolderName, Model.Book, Model.Chapter);
 }
 
-<div class="row">
-    <audio controls="controls">
-        <source src="@path" type="audio/mpeg" />
-    </audio>
-</div>
+@Html.Hidden("CurrentBook", Model.Book)
+@Html.Hidden("CurrentChapter", Model.Chapter)
+
+    @Html.Partial("_bookNavigator", Model.bookList)
+
+    <div class="row" style="margin-top:40px;">
+        <div class="text-center">
+            <audio controls="controls">
+                <source src="@path" type="audio/mpeg" />
+            </audio>
+        </div>
+    </div>
 
