@@ -7,7 +7,7 @@
 <h2 class="text-center">@Model.Book @Model.Chapter</h2>
 
 @{
-    var path = string.Format("/_Resources/Audio/OldTestament/{0}/{1}_{2}.mp3", Model.BookFolderName, Model.Book, Model.Chapter);
+    var path = string.Format("{0}{1}/{2}_{3}.mp3", Model.FilePath, Model.BookFolderName, Model.Book, Model.Chapter);
 }
 
 @Html.Hidden("CurrentBook", Model.Book)
@@ -17,9 +17,16 @@
 
     <div class="row" style="margin-top:40px;">
         <div class="text-center">
-            <audio controls="controls">
+            <audio controls="controls" preload="none">
                 <source src="@path" type="audio/mpeg" />
             </audio>
         </div>
     </div>
+
+@Html.Raw(Model.EsvHTML)
+
+<div style="margin-top:60px; font-size:11px;">
+    @Html.Raw(Model.Copyright)
+</div>
+@Html.Raw(Model.FUMsData)
 

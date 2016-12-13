@@ -11,6 +11,7 @@ namespace shelbysBible.Models
         public string Name { get; set; }
         public string Location { get; set; }
         public int NumberOfChapters { get; set; }
+        public string ApiID { get; set; }
         public BibleBooksEnum bookEnum { get; set; }
     }
 }

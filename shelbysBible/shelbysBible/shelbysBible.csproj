@@ -77,6 +77,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -140,11 +148,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -155,9 +158,12 @@
     <Compile Include="Models\BookData.cs" />
     <Compile Include="Models\BookList.cs" />
     <Compile Include="Models\LoadViewModel.cs" />
+    <Compile Include="Models\RestModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\BookMapperSupport.cs" />
-    <Compile Include="Support\shelbysBibleEnums.cs" />
+    <Compile Include="Support\ConfigUtils.cs" />
+    <Compile Include="Support\RestSupport.cs" />
+    <Compile Include="Support\EnumSupport.cs" />
     <Compile Include="Support\StringUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -176,7 +182,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\shelbysBible\SB.js" />
-    <Content Include="_Resources\Audio\OldTestament\B1_Genesis\Genesis_1.mp3" />
     <None Include="Properties\PublishProfiles\godaddy-shelbysBible.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -207,31 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="_Resources\Audio\OldTestament\B10_2Samuel\" />
-    <Folder Include="_Resources\Audio\OldTestament\B11_1Kings\" />
-    <Folder Include="_Resources\Audio\OldTestament\B12_2Kings\" />
-    <Folder Include="_Resources\Audio\OldTestament\B13_1Chronicles\" />
-    <Folder Include="_Resources\Audio\OldTestament\B14_2Chronicles\" />
-    <Folder Include="_Resources\Audio\OldTestament\B15_Ezra\" />
-    <Folder Include="_Resources\Audio\OldTestament\B16_Nehemiah\" />
-    <Folder Include="_Resources\Audio\OldTestament\B17_Esther\" />
-    <Folder Include="_Resources\Audio\OldTestament\B18_Job\" />
-    <Folder Include="_Resources\Audio\OldTestament\B19_Psalm\" />
-    <Folder Include="_Resources\Audio\OldTestament\B20_Proverbs\" />
-    <Folder Include="_Resources\Audio\OldTestament\B21_Ecclesiastes\" />
-    <Folder Include="_Resources\Audio\OldTestament\B22_SongOfSoloman\" />
-    <Folder Include="_Resources\Audio\OldTestament\B23_Isaiah\" />
-    <Folder Include="_Resources\Audio\OldTestament\B24_Jeremiah\" />
-    <Folder Include="_Resources\Audio\OldTestament\B25_Lamentations\" />
-    <Folder Include="_Resources\Audio\OldTestament\B26_Ezekiel\" />
-    <Folder Include="_Resources\Audio\OldTestament\B2_Exodus\" />
-    <Folder Include="_Resources\Audio\OldTestament\B3_Leviticus\" />
-    <Folder Include="_Resources\Audio\OldTestament\B4_Numbers\" />
-    <Folder Include="_Resources\Audio\OldTestament\B5_Deuteronomy\" />
-    <Folder Include="_Resources\Audio\OldTestament\B6_Joshua\" />
-    <Folder Include="_Resources\Audio\OldTestament\B7_Judges\" />
-    <Folder Include="_Resources\Audio\OldTestament\B8_Ruth\" />
-    <Folder Include="_Resources\Audio\OldTestament\B9_1Samuel\" />
+    <Folder Include="_Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
