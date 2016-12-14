@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Models\BookData.cs" />
     <Compile Include="Models\BookList.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\LoadViewModel.cs" />
     <Compile Include="Models\RestModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +210,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Load.cshtml" />
     <Content Include="Views\Shared\_bookNavigator.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

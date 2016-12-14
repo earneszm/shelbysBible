@@ -25,7 +25,7 @@ namespace shelbysBible.Support
         nehemiah,
         esther,
         job,
-        psalms,
+        psalm,
         proverbs,
         ecclesiastes,
         songofsoloman,

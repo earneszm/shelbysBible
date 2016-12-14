@@ -14,7 +14,14 @@ namespace shelbysBible.Controllers
     {
         public ActionResult Index()
         {
-            return Redirect("/load/Genesis/1");
+            var viewModel = new HomeViewModel();
+            viewModel.bookList.IsHomePage = true;
+            return View(viewModel);
+        }
+
+        public ActionResult About()
+        {
+            return View();
         }
 
         public ActionResult LoadRedirect(string book = "")
@@ -25,7 +32,7 @@ namespace shelbysBible.Controllers
         public ActionResult Load(string book = "Genesis", int chapter = 1)
         {
             
-            var viewModel = new LoadViewModel(BookMapperSupport.BookData[book.ToLower()], chapter);
+            var viewModel = new LoadViewModel(book, chapter);
 
             try
             {

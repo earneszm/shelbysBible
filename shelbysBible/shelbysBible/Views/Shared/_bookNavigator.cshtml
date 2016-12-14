@@ -1,19 +1,33 @@
 ﻿@model BookList
 
+@{
+    var isHomePage = Model.CurrentBook == "" ? true : false;
+
+ }
+
 <div class="row">
     <div class="col-xs-2">
-        <a href="#" onclick="SB.onNavigateLeft()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+        @if (Model.ShowNavigateLeft())
+        {
+            <a href="#" onclick="SB.onNavigateLeft()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+        }
     </div>
     <div class="col-xs-4">
-        
-        @Html.DropDownListFor(m => m.CurrentBook, new SelectList(BookMapperSupport.BookData.Select(x => x.Value.Name).ToList()),                       //Enum.GetValues(typeof(BibleBooksEnum))),
+
+        @Html.DropDownListFor(m => m.CurrentBook, new SelectList(BookMapperSupport.BookData.OrderBy(x => x.Value.Order).Select(x => new { Name = x.Value.Name, Value = x.Key }), "Value", "Name"),                       //Enum.GetValues(typeof(BibleBooksEnum))),
                     "Select Book", new { @class = "form-control", @onchange = "SB.onBookChange(this.value)" })
     </div>
     <div class="col-xs-4">
-        @Html.DropDownListFor(m => m.CurrentChapter, new SelectList(Enumerable.Range(1,BookMapperSupport.BookData[Model.CurrentBook.ToString().ToLower()].NumberOfChapters)),
-                    "Select Chapter", new { @class = "form-control", @onchange = "SB.onChapterChange(this.value)" })
+        @if (!Model.IsHomePage)
+        {
+            @Html.DropDownListFor(m => m.CurrentChapter, new SelectList(Enumerable.Range(1, BookMapperSupport.BookData[Model.CurrentBook.ToString().ToLower()].NumberOfChapters)),
+                             "Select Chapter", new { @class = "form-control", @onchange = "SB.onChapterChange(this.value)" })
+        }
     </div>
     <div class="col-xs-2">
-        <a href="#" onclick="SB.onNavigateRight()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        @if (Model.ShowNavigateRight())
+        {
+            <a href="#" onclick="SB.onNavigateRight()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        }
     </div>
 </div>

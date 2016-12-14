@@ -10,6 +10,7 @@ namespace shelbysBible.Models
     public class LoadViewModel
     {
         public string BookFolderName { get; set; }
+        public string BookFileName { get; set; }
         public string FilePath { get; set; }
         public string Book { get; set; }
         public int Chapter { get; set; }
@@ -21,8 +22,9 @@ namespace shelbysBible.Models
         public string FUMsData { get; set; }
         public string Copyright { get; set; }
 
-        public LoadViewModel(BookData bookData, int currentChapter)
+        public LoadViewModel(string book, int currentChapter)
         {
+            var bookData = BookMapperSupport.BookData[book.ToLower()];
             FilePath = ConfigUtils.LocationRoot;
 
             if ((int)bookData.bookEnum > 39)               
@@ -31,12 +33,13 @@ namespace shelbysBible.Models
                 FilePath += ConfigUtils.OldTestamentFolder;
 
             BookFolderName = bookData.Location;
+            BookFileName = bookData.Name.Replace(" ", "");
             Book = bookData.Name;
             Chapter = currentChapter;
 
             bookList = new BookList()
             {
-                CurrentBook = bookData.Name,
+                CurrentBook = book,
                 CurrentChapter = currentChapter
             };
         }
