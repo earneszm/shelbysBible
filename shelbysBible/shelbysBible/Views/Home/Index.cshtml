@@ -6,19 +6,18 @@
 
 @*@Html.Partial("_bookNavigator", Model.bookList)*@
 
-<div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8 text-center">
-        <h2>Shelby's Bible</h2><br/><h3>Select a book to get started.</h3>
+<div id="loadContentDiv">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h2>Shelby's Bible</h2><br /><h3>Select a book to get started.</h3>
+        </div>
     </div>
-    <div class="col-xs-2"></div>
-</div>
-<div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8 text-center">
-        @Html.DropDownListFor(m => m.bookList.CurrentBook, new SelectList(BookMapperSupport.BookData.OrderBy(x => x.Value.Order).Select(x => new { Name = x.Value.Name, Value = x.Key }), "Value", "Name"),                       //Enum.GetValues(typeof(BibleBooksEnum))),
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8 text-center">
+            @Html.DropDownListFor(m => m.bookList.CurrentBook, new SelectList(BookMapperSupport.BookData.OrderBy(x => x.Value.Order).Select(x => new { Name = x.Value.Name, Value = x.Key }), "Value", "Name"),                       //Enum.GetValues(typeof(BibleBooksEnum))),
                     "Select Book", new { @class = "form-control", @style = "display:inline;", @onchange = "SB.onBookChange(this.value)" })
+        </div>
+        <div class="col-xs-2"></div>
     </div>
-    <div class="col-xs-2"></div>
 </div>
-

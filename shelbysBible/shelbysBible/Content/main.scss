@@ -1,0 +1,89 @@
+﻿$primary-color: #3862c6;
+$secondary-color: #806641;
+$tertiary-color: #6E7587;
+
+$darktext-color: #000000;
+$background-color: white;
+$headertexthover-color: #ff9f71;
+
+$font-display: 'Franklin Gothic Medium', Arial, sans-serif;
+$font-text: Arial, sans-serif;
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font-text;
+}
+h1{
+    font-family: $font-display;
+}
+
+body {
+    font-family: $font-text;
+    font-size:16px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    min-height:500px;
+    background-color:white;
+}
+
+footer {
+    background-color: $secondary-color;
+    padding-top:20px;
+    min-height:80px;
+    font-weight:bold;
+    font-size:large;
+    box-shadow: 0px 500px 0px 500px $secondary-color;
+}
+
+.navLogo
+{
+    height:auto;
+    max-width:60px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.showAsClickable {
+    cursor: pointer;
+}
+
+
+
+
+.navbar-inverse{
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.navbar-inverse .navbar-brand{
+    color: $background-color;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: $background-color;
+    font-weight: bold;
+    font-size:larger;
+    margin-left: 10px;
+    margin-top:15px;
+    font-family: $font-display;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: $headertexthover-color;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right
+{
+    font-size: 40px;
+    color: $secondary-color;
+
+    &:hover{
+        color: $tertiary-color;
+    }
+}

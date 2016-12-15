@@ -4,9 +4,10 @@
     ViewBag.Title = "Load";
 }
 
+@Html.Partial("_Load", Model)
 
 
-@{
+@*@{
     var path = string.Format("{0}{1}/{2}_{3}.mp3", Model.FilePath, Model.BookFolderName, Model.BookFileName, Model.Chapter);
 }
 
@@ -20,16 +21,17 @@
     <div class="text-center">
         <audio controls="controls" preload="none">
             <source src="@path" type="audio/mpeg" />
+            Your browser does not support the audio element.
         </audio>
     </div>
 </div>
 
-<h2 class="text-center">@Model.Book @Model.Chapter</h2>
+<h1 class="text-center">@Model.Book @Model.Chapter</h1>
 
 @Html.Raw(Model.EsvHTML)
 
 <div style="margin-top:60px; font-size:11px;">
     @Html.Raw(Model.Copyright)
 </div>
-@Html.Raw(Model.FUMsData)
+@Html.Raw(Model.FUMsData)*@
 

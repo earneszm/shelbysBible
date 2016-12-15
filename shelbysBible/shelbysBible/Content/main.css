@@ -1,0 +1,59 @@
+﻿h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif; }
+
+h1 {
+  font-family: "Franklin Gothic Medium", Arial, sans-serif; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px; }
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  min-height: 500px;
+  background-color: white; }
+
+footer {
+  background-color: #806641;
+  padding-top: 20px;
+  min-height: 80px;
+  font-weight: bold;
+  font-size: large;
+  box-shadow: 0px 500px 0px 500px #806641; }
+
+.navLogo {
+  height: auto;
+  max-width: 60px; }
+
+.vertical-align {
+  display: flex;
+  align-items: center; }
+
+.showAsClickable {
+  cursor: pointer; }
+
+.navbar-inverse {
+  background-color: #3862c6;
+  border-color: #3862c6; }
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-weight: bold; }
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif; }
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ff9f71; }
+
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+  font-size: 40px;
+  color: #806641; }
+  .glyphicon-chevron-left:hover, .glyphicon-chevron-right:hover {
+    color: #6E7587; }
+

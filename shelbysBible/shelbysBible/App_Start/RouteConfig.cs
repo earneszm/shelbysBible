@@ -25,10 +25,18 @@ namespace shelbysBible
                 defaults: new { controller = "Home", action = "LoadRedirect", book = "" }
             );
 
+            // full postback
             routes.MapRoute(
                 name: "LoadBookAndChapter",
                 url: "load/{book}/{chapter}",
                 defaults: new { controller = "Home", action = "Load", book = "", chapter = "" }            
+            );
+
+            // ajax partial request
+            routes.MapRoute(
+                name: "LoadBookAndChapterPartial",
+                url: "loadpartial/{book}/{chapter}",
+                defaults: new { controller = "Home", action = "LoadPartial", book = "", chapter = "" }
             );
 
             routes.MapRoute(
