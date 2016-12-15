@@ -28,7 +28,7 @@ namespace shelbysBible.Support
         psalm,
         proverbs,
         ecclesiastes,
-        songofsoloman,
+        songofsolomon,
         isaiah,
         jeremiah,
         lamentations,

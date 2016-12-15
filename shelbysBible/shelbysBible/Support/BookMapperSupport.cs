@@ -61,7 +61,7 @@ namespace shelbysBible.Support
             {"psalms",         new BookData() { Name = "Psalm"          , Order = 19, Location = "B19_Psalm"            , NumberOfChapters = 150, ApiID="Ps", bookEnum = BibleBooksEnum.psalm} },
             {"proverbs",       new BookData() { Name = "Proverbs"        , Order = 20, Location = "B20_Proverbs"         , NumberOfChapters = 31 , ApiID="Prov", bookEnum = BibleBooksEnum.proverbs} },
             {"ecclesiastes",   new BookData() { Name = "Ecclesiastes"    , Order = 21, Location = "B21_Ecclesiastes"     , NumberOfChapters = 12 , ApiID="Eccl", bookEnum = BibleBooksEnum.ecclesiastes} },
-            {"songofsoloman",  new BookData() { Name = "Song of Solomon" , Order = 22, Location = "B22_SongOfSoloman"    , NumberOfChapters = 8  , ApiID="Song", bookEnum = BibleBooksEnum.songofsoloman} },
+            {"songofsolomon",  new BookData() { Name = "Song of Solomon" , Order = 22, Location = "B22_SongOfSolomon"    , NumberOfChapters = 8  , ApiID="Song", bookEnum = BibleBooksEnum.songofsolomon} },
             {"isaiah",         new BookData() { Name = "Isaiah"          , Order = 23, Location = "B23_Isaiah"           , NumberOfChapters = 66 , ApiID="Isa", bookEnum = BibleBooksEnum.isaiah} },
             {"jeremiah",       new BookData() { Name = "Jeremiah"        , Order = 24, Location = "B24_Jeremiah"         , NumberOfChapters = 52 , ApiID="Jer", bookEnum = BibleBooksEnum.jeremiah} },
             {"lamentations",   new BookData() { Name = "Lamentations"    , Order = 25, Location = "B25_Lamentations"     , NumberOfChapters = 5  , ApiID="Lam", bookEnum = BibleBooksEnum.lamentations} },

@@ -1,36 +1,35 @@
 ﻿
 @model LoadViewModel
 
-<div id="loadContentDiv">
 
-    @{
-        var path = string.Format("{0}{1}/{2}_{3}.mp3", Model.FilePath, Model.BookFolderName, Model.BookFileName, Model.Chapter);
-    }
+@{
+    var path = string.Format("{0}{1}/{2}_{3}.mp3", Model.FilePath, Model.BookFolderName, Model.BookFileName, Model.Chapter);
+}
 
-    @Html.Hidden("CurrentBook", Model.bookList.CurrentBook)
-    @Html.Hidden("CurrentChapter", Model.bookList.CurrentChapter)
+@Html.Hidden("CurrentBook", Model.bookList.CurrentBook)
+@Html.Hidden("CurrentChapter", Model.bookList.CurrentChapter)
 
-    @Html.Partial("_bookNavigator", Model.bookList)
+@Html.Partial("_bookNavigator", Model.bookList)
 
 
-    <div class="row" style="margin-top:40px;">
-        <div class="text-center">
-            <audio controls="controls" preload="none">
-                <source src="@path" type="audio/mpeg" />
-                Your browser does not support the audio element.
-            </audio>
-        </div>
+<div class="row" style="margin-top:40px;">
+    <div class="text-center">
+        <audio controls="controls" preload="none">
+            <source src="@path" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
     </div>
+</div>
 
-    <h1 class="text-center">@Model.Book @Model.Chapter</h1>
+<h1 class="text-center">@Model.Book @Model.Chapter</h1>
 
-    @Html.Raw(Model.EsvHTML)
+@Html.Raw(Model.EsvHTML)
 
-    <div style="margin-top:60px; font-size:11px;">
-        @Html.Raw(Model.Copyright)
-    </div>
+<div style="margin-top:60px; font-size:11px;">
+    @Html.Raw(Model.Copyright)
+</div>
 
-    @*This bullshit breaks the page
-        @Html.Raw(Model.FUMsData)*@
+@*This bullshit breaks the page
+    @Html.Raw(Model.FUMsData)*@
 
 
