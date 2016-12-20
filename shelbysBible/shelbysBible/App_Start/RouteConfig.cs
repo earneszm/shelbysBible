@@ -39,9 +39,16 @@ namespace shelbysBible
                 defaults: new { controller = "Home", action = "LoadPartial", book = "", chapter = "" }
             );
 
+            // ajax api request
+            routes.MapRoute(
+                name: "LoadApiText",
+                url: "LoadText/{book}/{chapter}",
+                defaults: new { controller = "Home", action = "LoadText", book = "", chapter = "" }
+            );
+
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }

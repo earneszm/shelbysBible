@@ -8,36 +8,6 @@ namespace shelbysBible.Support
 {
     public static class BookMapperSupport
     {
-        public static Dictionary<string, string> Map = new Dictionary<string, string>()
-        {
-            {"genesis", "B1_Genesis"},
-            {"exodus", "B2_Exodus"},
-            {"leviticus", "B3_Leviticus"},
-            {"numbers", "B4_Numbers"},
-            {"deuteronomy", "B5_Deuteronomy"},
-            {"joshua", "B6_Joshua"},
-            {"judges", "B7_Judges"},
-            {"ruth", "B8_Ruth"},
-            {"1samuel", "B9_1Samuel"},
-            {"2samuel", "B10_2Samuel"},
-            {"1kings", "B11_1Kings"},
-            {"2kings", "B12_2Kings"},
-            {"1chronicles", "B13_1Chronicles"},
-            {"2chronicles", "B14_2Chronicles"},
-            {"ezra", "B15_Ezra"},
-            {"nehemiah", "B16_Nehemiah"},
-            {"esther", "B17_Esther"},
-            {"job", "B18_Job"},
-            {"psalms", "B19_Psalm"},
-            {"proverbs", "B20_Proverbs"},
-            {"ecclesiastes", "B21_Ecclesiastes"},
-            {"songofsoloman", "B22_SongOfSoloman"},
-            {"isaiah", "B23_Isaiah"},
-            {"jeremiah", "B24_Jeremiah"},
-            {"lamentations", "B25_Lamentations"},
-            {"ezekiel", "B26_Ezekiel"}
-        };
-
         public static Dictionary<string, BookData> BookData = new Dictionary<string, BookData>()
         {            
             {"genesis",        new BookData() { Name = "Genesis"         , Order = 1 , Location = "B1_Genesis"           , NumberOfChapters = 50 , ApiID="Gen", bookEnum = BibleBooksEnum.genesis} },
@@ -58,7 +28,7 @@ namespace shelbysBible.Support
             {"nehemiah",       new BookData() { Name = "Nehemiah"        , Order = 16, Location = "B16_Nehemiah"         , NumberOfChapters = 13 , ApiID="Neh", bookEnum = BibleBooksEnum.nehemiah} },
             {"esther",         new BookData() { Name = "Esther"          , Order = 17, Location = "B17_Esther"           , NumberOfChapters = 10 , ApiID="Esth", bookEnum = BibleBooksEnum.esther} },
             {"job",            new BookData() { Name = "Job"             , Order = 18, Location = "B18_Job"              , NumberOfChapters = 42 , ApiID="Job", bookEnum = BibleBooksEnum.job} },
-            {"psalms",         new BookData() { Name = "Psalm"          , Order = 19, Location = "B19_Psalm"            , NumberOfChapters = 150, ApiID="Ps", bookEnum = BibleBooksEnum.psalm} },
+            {"psalm",         new BookData() { Name = "Psalm"          , Order = 19, Location = "B19_Psalm"            , NumberOfChapters = 150, ApiID="Ps", bookEnum = BibleBooksEnum.psalm} },
             {"proverbs",       new BookData() { Name = "Proverbs"        , Order = 20, Location = "B20_Proverbs"         , NumberOfChapters = 31 , ApiID="Prov", bookEnum = BibleBooksEnum.proverbs} },
             {"ecclesiastes",   new BookData() { Name = "Ecclesiastes"    , Order = 21, Location = "B21_Ecclesiastes"     , NumberOfChapters = 12 , ApiID="Eccl", bookEnum = BibleBooksEnum.ecclesiastes} },
             {"songofsolomon",  new BookData() { Name = "Song of Solomon" , Order = 22, Location = "B22_SongOfSolomon"    , NumberOfChapters = 8  , ApiID="Song", bookEnum = BibleBooksEnum.songofsolomon} },

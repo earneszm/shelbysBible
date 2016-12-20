@@ -9,25 +9,25 @@
     <div class="col-xs-2">
         @if (Model.ShowNavigateLeft())
         {
-            <span class="showAsClickable" href="#" onclick="SB.onNavigateLeft()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></span>
+            <span class="showAsClickable" href="#" onclick="SB.Util.onNavigateLeft()" ><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></span>
         }
     </div>
     <div class="col-xs-5 col-sm-4">
 
         @Html.DropDownListFor(m => m.CurrentBook, new SelectList(BookMapperSupport.BookData.OrderBy(x => x.Value.Order).Select(x => new { Name = x.Value.Name, Value = x.Key }), "Value", "Name"),                       //Enum.GetValues(typeof(BibleBooksEnum))),
-                    "Select Book", new { @class = "form-control", @onchange = "SB.onBookChange(this.value)" })
+                    "Select Book", new { @class = "form-control", @onchange = "SB.Util.onBookChange(this.value)" })
     </div>
     <div class="col-xs-3 col-sm-4">
         @if (!Model.IsHomePage)
         {
             @Html.DropDownListFor(m => m.CurrentChapter, new SelectList(Enumerable.Range(1, BookMapperSupport.BookData[Model.CurrentBook.ToString().ToLower()].NumberOfChapters)),
-                             "Select Chapter", new { @class = "form-control", @onchange = "SB.onChapterChange(this.value)" })
+                             "Select Chapter", new { @class = "form-control", @onchange = "SB.Util.onChapterChange(this.value)" })
         }
     </div>
     <div class="col-xs-2">
         @if (Model.ShowNavigateRight())
         {
-            <sapn class="showAsClickable" href="#" onclick="SB.onNavigateRight()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></sapn>
+            <sapn class="showAsClickable" href="#" onclick="SB.Util.onNavigateRight()"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></sapn>
         }
     </div>
 </div>

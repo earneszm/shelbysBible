@@ -16,14 +16,17 @@ namespace shelbysBible.Models
         public int Chapter { get; set; }
         public bool IsNewTestament { get; set; }
 
+        public string FullPath { get; set; }
+        public string FileSize { get; set; }
+
         public BookList bookList { get; set; }
 
-        public string EsvHTML { get; set; }
-        public string FUMsData { get; set; }
-        public string Copyright { get; set; }
+        public bool IsIncludeText { get; set; }
+        public TextViewModel Text { get; set; }
 
         public LoadViewModel(string book, int currentChapter)
         {
+            Text = new TextViewModel();
             var bookData = BookMapperSupport.BookData[book.ToLower()];
             FilePath = ConfigUtils.LocationRoot;
 
@@ -36,6 +39,8 @@ namespace shelbysBible.Models
             BookFileName = bookData.Name.Replace(" ", "");
             Book = bookData.Name;
             Chapter = currentChapter;
+
+            FullPath = string.Format("{0}{1}/{2}_{3}.mp3", FilePath, BookFolderName, BookFileName, Chapter);            
 
             bookList = new BookList()
             {

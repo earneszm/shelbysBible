@@ -54,6 +54,8 @@ footer {
 .glyphicon-chevron-left, .glyphicon-chevron-right {
   font-size: 40px;
   color: #806641; }
-  .glyphicon-chevron-left:hover, .glyphicon-chevron-right:hover {
-    color: #6E7587; }
+
+html.glyphicon-chevron-left:hover, .glyphicon-chevron-left:active,
+html.glyphicon-chevron-right:hover, .glyphicon-chevron-right:active {
+  color: #6E7587; }
 

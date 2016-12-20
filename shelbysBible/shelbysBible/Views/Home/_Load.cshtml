@@ -2,9 +2,6 @@
 @model LoadViewModel
 
 
-@{
-    var path = string.Format("{0}{1}/{2}_{3}.mp3", Model.FilePath, Model.BookFolderName, Model.BookFileName, Model.Chapter);
-}
 
 @Html.Hidden("CurrentBook", Model.bookList.CurrentBook)
 @Html.Hidden("CurrentChapter", Model.bookList.CurrentChapter)
@@ -15,21 +12,25 @@
 <div class="row" style="margin-top:40px;">
     <div class="text-center">
         <audio controls="controls" preload="none">
-            <source src="@path" type="audio/mpeg" />
-            Your browser does not support the audio element.
+            <source src="@Model.FullPath" type="audio/mpeg" />
+            Only mp3 format is supported. You browser does not support this file type.
         </audio>
+    </div>
+    <div class="text-center">
+            @Model.FileSize.ToString()
     </div>
 </div>
 
 <h1 class="text-center">@Model.Book @Model.Chapter</h1>
 
-@Html.Raw(Model.EsvHTML)
-
-<div style="margin-top:60px; font-size:11px;">
-    @Html.Raw(Model.Copyright)
+<div id="ajaxLoadingDiv" class="text-center" style="display:none;">
+    <img src="~/Images/loadingGif.gif" />
 </div>
 
-@*This bullshit breaks the page
-    @Html.Raw(Model.FUMsData)*@
-
+<div id="textLoadDiv">
+    @if (Model.IsIncludeText)
+    {
+        @Html.Partial("_LoadText", Model.Text)
+    }
+</div>
 
