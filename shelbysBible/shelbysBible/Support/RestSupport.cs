@@ -21,5 +21,18 @@ namespace shelbysBible.Support
 
             return response.Content;
         }
+
+        public static string RequestVerseOfTheDay()
+        {
+            var requestString = string.Format(string.Format("{0}", ConfigUtils.Verse_Of_The_Day_Url));
+            var client = new RestClient(requestString);
+            var request = new RestRequest("", Method.GET);
+
+         //   request.AddHeader("Authorization", string.Format("Basic {0}", ConfigUtils.API_Key));
+
+            var response = client.Execute(request);
+
+            return response.Content;
+        }
     }
 }

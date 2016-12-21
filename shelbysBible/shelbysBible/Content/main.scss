@@ -78,11 +78,31 @@ footer {
 }
 
 .glyphicon-chevron-left, .glyphicon-chevron-right {
-    font-size: 40px;
+    font-size: 65px;
     color: $secondary-color;
 }
 
-html.glyphicon-chevron-left:hover, .glyphicon-chevron-left:active,
-html.glyphicon-chevron-right:hover, .glyphicon-chevron-right:active {
-    color: $tertiary-color;
+@media (hover:hover) {
+    .glyphicon-chevron-left:hover, .glyphicon-chevron-left:active,
+    .glyphicon-chevron-right:hover, .glyphicon-chevron-right:active {
+        color: $tertiary-color;
+    }
+}
+
+@media (hover:none) {
+     .glyphicon-chevron-left:active,
+     .glyphicon-chevron-right:active {
+        color: $tertiary-color;
+    }
+}
+
+.sb-about-content > p {
+    font-size: larger;
+    text-indent: 50px;
+    margin-top: 20px;
+}
+
+.sb-about-content {
+    margin-top: 10px;
+    margin-bottom: 70px;
 }

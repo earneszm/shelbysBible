@@ -16,6 +16,7 @@ namespace shelbysBible.Support
         // API
         public static string API_Url { get; set; }
         public static string API_Key { get; set; }
+        public static string Verse_Of_The_Day_Url { get; set; }
 
 
         static ConfigUtils()
@@ -26,6 +27,7 @@ namespace shelbysBible.Support
 
             API_Url = ConfigurationManager.AppSettings["API.Url"];
             API_Key = ConfigurationManager.AppSettings["API.Base64Key"];
+            Verse_Of_The_Day_Url = ConfigurationManager.AppSettings["VerseOfTheDay.Url"];
 
         }
     }

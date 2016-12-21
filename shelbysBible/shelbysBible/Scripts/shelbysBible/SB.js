@@ -61,3 +61,14 @@ SB.Util = (function ($) {
 window.onpopstate = function (event) {
     window.location.href = document.location;
 };
+
+$(document).ready()
+{
+    if ($('#contactParagraphPlaceHolder').length) {
+        // inject email with javascript, supposively helps against spam bots?
+        var username = "zach";
+        var hostname = "shelbysbible.com";
+        var linktext = username + "@" + hostname;
+        $('#contactParagraphPlaceHolder').append(linktext);
+    }
+}

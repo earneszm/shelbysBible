@@ -19,6 +19,9 @@ namespace shelbysBible.Controllers
         {
             var viewModel = new HomeViewModel();
             viewModel.bookList.IsHomePage = true;
+
+           // var test = RestSupport.RequestVerseOfTheDay();
+
             return View(viewModel);
         }
 
